@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+aeneas==1.7.3
+python-multipart
+requests
+openai
