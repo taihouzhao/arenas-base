@@ -28,9 +28,7 @@ RUN git clone https://github.com/caixxiong/espeak-data/ \
 RUN cd /usr/lib/x86_64-linux-gnu/espeak-data/ \
     && ls -la \
     && espeak --compile=zh \
-    && espeak --compile=zhy \
-    && espeak-ng --compile=zh \
-    && espeak-ng --compile=zhy
+    && espeak --compile=zhy 
 
 RUN pip install --no-cache-dir numpy
 COPY requirements.txt .
