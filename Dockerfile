@@ -3,7 +3,6 @@ FROM python:3.10-slim-bullseye
 # Install required packages
 RUN apt-get update && apt-get install -y \
     libopencv-dev \
-    espeak \
     alsa-utils \
     ffmpeg \
     vim \
@@ -11,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     espeak \
     espeak-ng \
     espeak-data \
+    espeak-ng-data \
     libespeak-dev \
     python3-dev \
     build-essential \
@@ -28,7 +28,9 @@ RUN git clone https://github.com/caixxiong/espeak-data/ \
 RUN cd /usr/lib/x86_64-linux-gnu/espeak-data/ \
     && ls -la \
     && espeak --compile=zh \
-    && espeak --compile=zhy
+    && espeak --compile=zhy \
+    && espeak-ng --compile=zh \
+    && espeak-ng --compile=zhy
 
 RUN pip install --no-cache-dir numpy
 COPY requirements.txt .
