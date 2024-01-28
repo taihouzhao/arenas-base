@@ -3,4 +3,6 @@ uvicorn
 aeneas==1.7.3
 python-multipart
 requests
-openai
+oss2
+docx2txt
+srt
