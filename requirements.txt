@@ -6,3 +6,4 @@ requests
 oss2
 docx2txt
 srt
+opencv-python-headless

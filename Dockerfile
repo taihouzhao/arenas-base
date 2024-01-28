@@ -15,6 +15,10 @@ RUN apt-get update && apt-get install -y \
     python3-dev \
     build-essential \
     git \
+    libreoffice \
+    imagemagick \
+    opencv-python-headless \
+    libopencv-dev \
     unzip \
     && rm -rf /var/lib/apt/lists/*
 
