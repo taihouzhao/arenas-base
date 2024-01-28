@@ -17,7 +17,6 @@ RUN apt-get update && apt-get install -y \
     git \
     libreoffice \
     imagemagick \
-    opencv-python-headless \
     libopencv-dev \
     unzip \
     && rm -rf /var/lib/apt/lists/*
